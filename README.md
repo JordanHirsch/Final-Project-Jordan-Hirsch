@@ -97,7 +97,7 @@ Describe any challenges encountered while building the app.
 
 - Styling iterations: Switching in custom fonts, gym-themed colors, light/dark experiments, then rolling back to stable CSS.
 
-
+Still cannot start Netlify after trying for a few hours. extremely confused, will continue trying again tomorrow even if it is not worth anything for project...
 =======
 # final-project-JordanHirsch
 final-project-JordanHirsch created by GitHub Classroom
