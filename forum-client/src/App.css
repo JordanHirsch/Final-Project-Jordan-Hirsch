@@ -1,0 +1,180 @@
+/* ─── Global Gym Background ─── */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* now pointing to src/assets via relative path */
+  background: url('./assets/GymBackground.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Semi-transparent overlay so text still pops */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+:root {
+  /* now transparent so the background shows through */
+  --bg:       transparent;
+  /* slightly translucent cards for readability */
+  --card-bg:  rgba(255,255,255,0.9);
+  --primary:  #e63946;
+  --text:     #f0f0f0;
+  --text-dark:#333333;
+  --border:   rgba(255,255,255,0.1);
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  /* Roboto Slab for body text */
+  font-family: 'Roboto Slab', serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Card panels */
+.container .card {
+  background: var(--card-bg);
+  color: var(--text-dark);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid var(--border);
+}
+
+/* Headings use Montserrat for a bold, gym-poster look */
+.container h1,
+.container h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Forms */
+.container input,
+.container textarea,
+.container select {
+  width: 100%;
+  padding: 8px 12px;
+  margin: 8px 0 16px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: #f9f9f9;
+  color: var(--text-dark);
+  font-size: 1rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+/* Buttons */
+.container button,
+.container .btn {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity .2s, transform .1s;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container button:hover,
+.container .btn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+/* Links */
+.container a {
+  color: var(--primary);
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container a:hover {
+  text-decoration: underline;
+}
+
+/* Utility */
+.mt-4 { margin-top: 24px; }
+.mb-4 { margin-bottom: 24px; }
+.text-sm { font-size: .875rem; }
+.text-gray { color: #777; }
+
+/* ── NAVIGATION DROPDOWN (desktop & mobile) ── */
+/* ── NAVBAR LAYOUT ── */
+.nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+/* Brand title in your red accent */
+.nav-brand {
+  color: var(--primary);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Toggle button */
+.nav-toggle {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Dropdown menu (hidden by default) */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--card-bg);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  padding: 8px 0;
+  min-width: 160px;
+  z-index: 10;
+}
+
+/* Show when open */
+.nav-menu.open {
+  display: flex;
+}
+
+/* Menu links */
+.nav-item {
+  display: block;
+  padding: 8px 16px;
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+}
+.nav-item:hover {
+  background: rgba(0,0,0,0.05);
+  color: var(--primary);
+}

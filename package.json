@@ -1,0 +1,30 @@
+{
+  "name": "final-project-jordanhirsch",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FAU-FullStack-Dev-Spring2025/final-project-JordanHirsch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FAU-FullStack-Dev-Spring2025/final-project-JordanHirsch/issues"
+  },
+  "homepage": "https://github.com/FAU-FullStack-Dev-Spring2025/final-project-JordanHirsch#readme",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.14.0",
+    "sequelize": "^6.37.7",
+    "socket.io": "^4.8.1"
+  }
+}
